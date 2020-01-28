@@ -1,0 +1,56 @@
+
+
+    
+     
+    
+    <table class="table table-hover" align="center" border="5px" style="border-color: white;" >
+        <thead>
+ 
+         </thead>
+         <tbody>
+            <a href="/UserCart" style="float:right;">&nbsp;&nbsp; Show Cart</a><br><br>
+             
+ <tr>
+     <td>NonVeg MenuList<br><br>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Add To Cart</td>
+        </tr>
+         <tr *ngFor="let Menu of val">
+             <td>{{Menu.Name}}</td>
+             <td>{{Menu.Price}}</td>
+             <td>
+             <input  [(ngModel)]="Quantity" type="number" name="Quantity" id="cart"  value=""  >
+             </td>
+
+             <td>
+               
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <button type="button" (click)='AddToCart1(Menu.Id,Menu.Price)' class="btn btn-primary" style="align-content: center;">AddToCart</button>
+                
+            </td>
+ 
+ 
+            
+        </tr>
+     <tr>
+        
+     </tr>
+     </td><br>
+ 
+ 
+ 
+ 
+ </tr>
+ </tbody>
+ 
+ 
+ <a href="/DashboardUser">GoToBack</a>&nbsp;&nbsp;
+ <a href="/UserLocation"><button>Continue</button></a><br><br>
+ Veg MenuList<a href="/UserMenulist">&nbsp;&nbsp; Click Here</a><br><br>
+ ColdDrink List<a href="/UserMenulist2">&nbsp;&nbsp; Click Here</a>
+ </table>
+ 
+ 

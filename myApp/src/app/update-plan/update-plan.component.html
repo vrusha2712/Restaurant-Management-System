@@ -1,0 +1,35 @@
+
+    <div class="login" style="color: white;">
+    <div class="inputBox">
+    
+    
+        <div class="form-group">
+            <label for="Id">MenuId</label>
+            <input [(ngModel)]="Menu.Id" type="text" class="form-control" id="Id" name="Id" >
+        </div>
+    
+    <div class="form-group">
+        <label for="Name">Menu Name</label>
+        <input  [(ngModel)]="Menu.Name" type="text" class="form-control" id="Name" name="Name">
+    </div>
+    
+    <div class="form-group">
+        <label for="Price"> Price</label>
+        <input  [(ngModel)]="Menu.Price" type="text" class="form-control" id="Price" name="Price">
+    </div>
+    
+    <div class="form-group">
+        <label for="CategoryId">CategoryId</label>
+        <input [(ngModel)]="Menu.CategoryId" type="text" class="form-control" id="CategoryId" name="CategoryId">
+    </div>
+    
+    <button type="button" (click)="Update()" class="btn btn-primary">Update</button>
+    
+    <span>
+        {{message}}
+    </span>
+    
+    </div>
+    </div>
+
+    

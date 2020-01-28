@@ -1,0 +1,23 @@
+
+<div class="table-responsive">
+    <table class="table table-hover" style=" font-style: italic;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Pincode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let l of LocationData">
+                <td>{{l.Id}}</td>
+                <td>{{l.Country}}</td>
+                <td>{{l.State}}</td>
+                <td>{{l.City}}</td>
+                <td>{{l.Pincode}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+.inputBox
+{
+    position: relative;
+    height: 100%;
+    width: 300px
+}
+
+.Register
+{
+    position: relative;
+    float: right;
+    width: 850px;
+    font-style: italic;
+    
+}

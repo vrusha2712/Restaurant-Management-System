@@ -1,0 +1,69 @@
+
+ <button (click)="switchLanguage('en')">English</button>&nbsp;&nbsp;&nbsp;
+
+<button (click)="switchLanguage('ge')">German</button>&nbsp;&nbsp;&nbsp;
+<button (click)="switchLanguage('hi')">Hindi</button>
+<p class="home">
+    ROZZIES 
+        Indian Restaurant
+</p>
+
+
+
+
+<div >
+
+   
+
+    <form role="form" #myForm="ngForm" (ngSubmit)="Login(myForm)" class="login-form">
+
+    <div class="login">
+        <div class="inputBox">
+            <h4>Login Form</h4><br>
+
+            
+            Don't have an account?<a href="/Register"> Register Here</a><br>
+
+            
+        <label><h4>{{ "EmailId" | translate }}</h4></label>
+        <input ngModel type="text" class="form-control" id="EmailId" required email name="EmailId" #EmailId="ngModel" #spy>
+        <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+          <div *ngIf="EmailId.errors.required">
+              Email id is required.
+          </div>
+          <div *ngIf="EmailId.errors.email">
+              Email Id must be valid.
+          </div>
+      </div>   
+
+
+        <label><h4>{{ "Password" | translate }}</h4></label>
+        <input ngModel type="password" class="form-control" id="Password" required minlength="4" maxlength="10" name="Password" #Password="ngModel" #spy>
+      <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+        <div *ngIf="Password.errors.required">
+            Password is required.
+        </div>
+        <div *ngIf="Password.errors.minlength">
+            Password must be at least 4 characters long.
+        </div>
+    </div>   
+        
+        
+        
+        <br>
+     
+        
+      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+       
+      <button type="submit"  [disabled]="!myForm.form.valid" class="btn btn-primary" style="align-content: center;">Login</button> &nbsp;<br>
+       
+       Forgotten your password?<a href="/ChangePassword"> click here</a>
+        
+    </div>
+    
+    </div>
+    
+</form>
+
+
+</div>

@@ -1,0 +1,51 @@
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)" class="login-form">
+    <div class="Register">
+        <div class="inputBox">
+            
+    
+            
+            <input ngModel type="text" name="Name" id="input"  required pattern="[A-Za-z0-9]+" placeholder="only text" #Name="ngModel" #spy>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="submit" class="btn btn-primary" style="align-content: center;" >Add</button><br><br>
+            
+        </div>
+        </div>
+    
+    </form>
+
+  
+<div class="table">                 
+    <table class="table table-hover" align="center">
+       <thead>
+           <tr>
+                <th>Id</th> <th>Category Name</th><th></th><th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let Category of Category">
+                <td>{{Category.Id}}</td>
+                <td>{{Category.Name}}</td>
+                <td>
+
+
+              <button type="button"(click)="Delete(Category.Id)" class="btn btn-primary" style="align-content: center;" >Delete</button>                               
+
+                </td>
+            </tr>
+             <tr>
+                  <td><a href="/MenuList"><button>Veg MenuList</button></a></td>
+          
+                  <td><a href="/MenuList1"><button>NonVeg MenuList</button></a></td>
+                  <td><a href="/MenuList2"><button>ColdDrinks</button></a></td>
+
+
+           </tr>
+           
+        </tbody>
+    </table>
+</div>
+
+<a href="/Dashboard">GoToBack
+
+</a>

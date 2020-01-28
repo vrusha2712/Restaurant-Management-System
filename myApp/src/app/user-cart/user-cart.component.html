@@ -1,0 +1,50 @@
+
+<div class="table-responsive">
+    <table class="table table-hover" style=" font-style: italic;">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>MenuId</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of CartData">
+                <td>{{c.UserId}}</td>
+                <td>{{c.MenuId}}</td>
+                <td>{{c.Price}}</td>
+                <td>{{c.Quantity}} 
+                </td>
+                <td>{{c.Amount}}</td>
+                <td>
+                    
+                    <button type="button"(click)="Delete(c.Id)" class="btn btn-primary" style="background-color: blueviolet; height: 40px;" >Delete</button>                               
+
+                    
+                </td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><h5>Total Amount :{{totalamt}}</h5></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<br>
+
+
+<a href="/UserLocation" >&nbsp;&nbsp;&nbsp;<button style="background-color: blueviolet; height: 40px;">Order Now</button> 
+<a href="/UserMenulist">GoToBack
+    
+</a>
+

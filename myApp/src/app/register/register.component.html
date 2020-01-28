@@ -1,0 +1,72 @@
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)" class="login-form">
+<div class="Register">
+    <div class="inputBox">
+        <!-- <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registration Form</h4> -->
+
+        <label><b>Name</b></label>
+        <input ngModel type="text" name="Name" id="input" class="form-control" required pattern="[A-Za-z0-9]+" required="required" placeholder="only text" #Name="ngModel" #spy>
+        <div *ngIf="Name.invalid && (Name.dirty || Name.touched || Name.pristine)" class="alert alert-danger">
+            <div *ngIf="Name.errors.required">
+                Name is required.
+            </div>
+            <div *ngIf="Name.errors.pattern">
+                Allowed only Alphabets
+            </div>
+        </div>  
+
+        <label><b>Email</b></label>
+        <input ngModel type="email" name="EmailId" id="input" class="form-control" value=""  required="required" placeholder="xyz@gmail.com" required email name="EmailId" #EmailId="ngModel" #spy>
+        <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+            <div *ngIf="EmailId.errors.required">
+                Email id is required.
+            </div>
+            <div *ngIf="EmailId.errors.email">
+                Email Id must be valid.
+            </div>
+        </div>   
+
+        <label><b>Password</b></label>
+        <input ngModel type="password" name="Password" id="input" class="form-control" required="required" required minlength="4" maxlength="10" #Password="ngModel" #spy>
+        <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+            <div *ngIf="Password.errors.required">
+                Password is required.
+            </div>
+            <div *ngIf="Password.errors.minlength">
+                Password must be at least 4 characters long.
+            </div>
+        </div> 
+
+
+        <label><b>Confirm Password</b></label>
+        <input ngModel type="password"  id="input" class="form-control" required="required" placeholder="same as password" required minlength="4" maxlength="10" name="ConfirmPassword"  #ConfirmPassword="ngModel" #spy>
+        <div *ngIf="ConfirmPassword.invalid && (ConfirmPassword.dirty ||ConfirmPassword.touched || ConfirmPassword.pristine)" class="alert alert-danger">
+            <div *ngIf="ConfirmPassword.errors.required">
+                Password is required.
+            </div>
+            <div *ngIf="ConfirmPassword.errors.minlength">
+                Password must be at least 4 characters long.
+            </div>
+        </div>   
+
+        <label><b>Mobile Number</b></label>
+        <input ngModel type="number"  id="input" class="form-control" required pattern="[0-9]{10}"  maxlength="10"  id="MobileNo" name="MobileNo" #MobileNo="ngModel">
+        <div *ngIf="MobileNo.invalid && (MobileNo.dirty || MobileNo.touched || MobileNo.pristine)" class="alert alert-danger">
+            <div *ngIf="MobileNo.errors.required">
+                Number is required.
+            </div>
+            <div *ngIf="MobileNo.errors.pattern">
+                Allowed 10 digit number only
+            </div>
+        </div>  
+       
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="submit" class="btn btn-primary" style="align-content: center;" [disabled]="!myForm.form.valid">Register</button>
+        
+        
+         
+
+    </div>
+    </div>
+
+</form>

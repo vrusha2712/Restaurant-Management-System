@@ -1,0 +1,65 @@
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)" class="login-form">
+    <div class="Register">
+        <div class="inputBox">
+            <h2></h2>
+    
+            <input ngModel type="number"  name="CategoryId" id="input" required="required"  placeholder="2" min="2" max="2" #CategoryId="ngModel" #spy> &nbsp; &nbsp;
+
+            <input ngModel type="text" name="Name" id="input"   required="required" placeholder="Enter Name" #Name="ngModel" #spy> &nbsp; &nbsp;
+             
+            <input ngModel type="number" name="Price" id="input"  value=""  required="required" placeholder="Enter Price"  #Price="ngModel" #spy>&nbsp; &nbsp;
+            
+    
+                 &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="submit" class="btn btn-primary" style="align-content: center;" >Submit</button><br><br>
+            
+            
+             
+    
+        </div>
+        </div>
+    
+    </form>
+
+
+
+
+
+
+<table class="table table-hover" align="center">
+    
+    <thead>
+        <tr>
+             <th>Id</th><th> Menu Name</th><th>Price</th>
+         </tr>
+     </thead>
+     <tbody>
+         
+         <tr *ngFor="let Menu of val">
+             <td>{{Menu.Id}}</td>
+             <td>{{Menu.Name}}</td>
+             <td>{{Menu.Price}}</td>
+           
+             <td>
+
+
+           <button type="button"(click)="Delete(Menu.Id)" class="btn btn-primary" style="align-content: center;" >Delete</button>                               
+           
+             </td>
+
+             <td><a routerLink="/UpdatePath/{{Menu.Id}}"><button style="background-color:blue;color: white;">Update</button></a> </td> 
+
+                  
+
+
+            
+         </tr>
+
+         <tr>
+            <a href="/Category">GoToBack
+
+            </a>
+        </tr>
+        
+     </tbody>
+ </table>

@@ -1,0 +1,62 @@
+
+
+<br><br><br>
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)" class="login-form">
+
+<table cellpadding="2" width="50%"  align="center"cellspacing="2" style="font-style: italic; font-size: 20px;">
+    <tr>
+        <td></td>
+        <td> <h4 >Enter Your Location</h4></td>
+    </tr>
+   <br>
+<tr>
+<td colspan=2>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td>City</td>
+<td><input  [(ngModel)]="City"  type="text" name="City" required pattern="[A-Za-z0-9]+" required="required" id="City" size="30" ></td>
+</tr>
+<br>
+
+
+<tr>
+<td>Country</td>
+<td><input  [(ngModel)]="Country"  type="text" required pattern="[A-Za-z0-9]+" required="required" name="Country" id="Country" size="30" ></td>
+
+</tr>
+<br>
+<tr>
+<td>State</td>
+<td><input  [(ngModel)]="State" type="text" name="State" required pattern="[A-Za-z0-9]+" required="required" id="State" size="30" ></td>
+</tr><br>
+<tr>
+<td>PinCode</td>
+<td><input   [(ngModel)]="Pincode"  type="text" name="Pincode" required pattern="[A-Za-z0-9]+" required="required" id="Pincode" size="30" ></td>
+
+</tr>
+<br><br>
+<tr>
+    <td></td>
+<td>
+<button type="button" (click)='Add(myForm)' class="btn btn-primary" style="align-content: center; background-color: blueviolet;"> Submit order Location</button>
+</td>
+</tr>
+</table>
+</form>
+
+
+
+
+
+
+
+
+
+
+

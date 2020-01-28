@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Card Validation Demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+</head>
+
+<body>
+   
+<form role="form" #myForm="ngForm" (ngSubmit)="Add(myForm)" class="login-form">
+   
+    <div class="container-fluid">
+
+        <div class="creditCardForm">
+            <div class="heading">
+                <h1>Confirm Purchase</h1>
+            </div>
+            <div class="payment">
+           
+                    <div class="form-group owner">
+                        <label for="Name">Name</label>
+                        <input  [(ngModel)]="Name"  type="text" name="Name" required="required" id="Name" size="30" >
+                    </div>
+                    <div class="form-group CVV">
+                        <label for="CVV">CVV</label>
+                        <input  [(ngModel)]="CVV"  type="number" name="CVV" required="required" id="CVV" size="3" >
+                    </div>
+                    <div class="form-group" id="card-number-field">
+                        <label for="Card_Number">Card Number</label>
+                        <input  [(ngModel)]="Card_Number"  type="number" name="Card_Number"  required="required" id="Card_Number" size="16" >
+                    </div>
+                    <div class="form-group">
+                        <label>Expiration Date</label>
+                        <input  [(ngModel)]="Expire"  type="date" name="Expire"  required="required" id="Expire" >
+                    </div>
+                  
+              
+                     
+                   
+                      <div class="form-group" id="credit_cards">
+                        <img src="assets/images/visa.jpg" id="visa">&nbsp;&nbsp;
+                        <img src="assets/images/mastercard.jpg" id="mastercard">&nbsp;&nbsp;
+                        <img src="assets/images/amex.jpg" id="amex"><br><br>
+                        <button type="button" (click)='Add(myForm)' class="btn btn-primary" style="align-content: center; background-color: blueviolet;">Pay Now</button>   </div>
+            </div>
+        </div>
+
+        
+    </div>
+    </form>
+</body>
+
+</html>
+

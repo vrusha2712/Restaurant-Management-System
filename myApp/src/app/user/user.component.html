@@ -1,0 +1,21 @@
+
+<div class="table-responsive">
+    <table class="table table-hover" style=" font-style: italic;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>EmailId</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of userdata">
+                <td>{{u.UserId}}</td>
+                <td>{{u.Name}}</td>
+                <td>{{u.EmailId}}</td>
+                <td>{{u.MobileNo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

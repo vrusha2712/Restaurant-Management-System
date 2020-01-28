@@ -1,0 +1,23 @@
+.login
+{
+    position: relative;
+    float: right;
+    width: 850px;
+    font-style: italic;
+   
+}
+
+
+.inputBox
+{
+    position: relative;
+    height: 100%;
+    width: 300px
+}
+.home
+{
+   
+    font-style: italic;
+    font-size: 30px;
+    
+}
